@@ -1,0 +1,109 @@
+Restore Archived Project report for digital_cam_impl4
+Mon Jun 18 14:27:33 2018
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Mon Jun 18 14:27:32 2018 ;
+; Revision Name                   ; digital_cam_impl4                     ;
+; Top-level Entity Name           ; digital_cam_impl4                     ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/Soufiane/Desktop/School 2017-2018/Semester 2/Socoe/Project/HandMovement/digital_cam_impl4 (1).qar' into the 'C:/Users/Soufiane/Desktop/School 2017-2018/Semester 2/Socoe/Project/HandMovement/digital_cam_impl4 (1)_restored/' directory
+Info: Generated report 'digital_cam_impl4.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/16.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4745 megabytes
+    Info: Processing ended: Mon Jun 18 14:27:33 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++-------------------------------------------+
+; Files Restored                            ;
++-------------------------------------------+
+; File Name                                 ;
++-------------------------------------------+
+; qar_info.json                             ;
+; RGB.vhd                                   ;
+; address_Generator.vhd                     ;
+; binary_divider.vhd                        ;
+; debounce.vhd                              ;
+; digital_cam_impl4.qpf                     ;
+; digital_cam_impl4.qsf                     ;
+; digital_cam_impl4.sdc                     ;
+; digital_cam_impl4_assignment_defaults.qdf ;
+; do_black_white.vhd                        ;
+; do_edge_detection.vhd                     ;
+; ed_cache_system.vhd                       ;
+; ed_counter.vhd                            ;
+; ed_double_fifo_linebuffer.vhd             ;
+; ed_edge_sobel_wrapper.vhd                 ;
+; ed_fifo_linebuffer.vhd                    ;
+; ed_sobel_kernel.vhd                       ;
+; ed_sync_signals_delayer.vhd               ;
+; frame_buffer.vhd                          ;
+; i2c_sender.vhd                            ;
+; my_altpll.cmp                             ;
+; my_altpll.ppf                             ;
+; my_altpll.qip                             ;
+; my_altpll.vhd                             ;
+; my_frame_buffer_15to0.cmp                 ;
+; my_frame_buffer_15to0.qip                 ;
+; my_frame_buffer_15to0.vhd                 ;
+; output_files/Chain1.cdf                   ;
+; output_files/Chain2.cdf                   ;
+; output_files/Chain3.cdf                   ;
+; ov7670_capture.vhd                        ;
+; ov7670_controller.vhd                     ;
+; ov7670_registers.vhd                      ;
+; top_level.vhd                             ;
+; vga.vhd                                   ;
++-------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

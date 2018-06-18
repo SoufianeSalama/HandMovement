@@ -1,0 +1,7 @@
+{
+	"common_dir" : "C:/SoCLab/MESS_Lab/OV7670_on_DE2-115_FPGA/DE1SOC/digital_cam_impl4/",
+	"acds_version" : "Version 16.1.0",
+	"platform" : "windows",
+	"os" : "Windows 7",
+	"qpf" : "digital_cam_impl4.qpf"
+}

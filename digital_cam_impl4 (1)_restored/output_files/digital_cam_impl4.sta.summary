@@ -1,0 +1,245 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk_vga'
+Slack : -8.556
+TNS   : -186.671
+
+Type  : Slow 1100mV 85C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : -5.996
+TNS   : -11591.365
+
+Type  : Slow 1100mV 85C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.561
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.610
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.315
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.375
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk_vga'
+Slack : 3.262
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 34.686
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.984
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.299
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.784
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_50'
+Slack : 9.900
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.756
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'clk_vga'
+Slack : -8.385
+TNS   : -183.703
+
+Type  : Slow 1100mV 0C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : -5.942
+TNS   : -11225.786
+
+Type  : Slow 1100mV 0C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.738
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.751
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.289
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.301
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk_vga'
+Slack : 3.185
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 34.935
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.815
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.249
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.763
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_50'
+Slack : 9.926
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.733
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clk_vga'
+Slack : -5.113
+TNS   : -114.030
+
+Type  : Fast 1100mV 85C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.055
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 6.717
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 6.756
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk_vga'
+Slack : 1.384
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 36.424
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.305
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.550
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.893
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_50'
+Slack : 9.643
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.878
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk_vga'
+Slack : -4.825
+TNS   : -108.363
+
+Type  : Fast 1100mV 0C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.694
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 7.010
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 7.056
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk_vga'
+Slack : 1.200
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 36.838
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.140
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.540
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll3~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.891
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_50'
+Slack : 9.632
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Inst_four_clocks_pll|altpll_component|auto_generated|generic_pll2~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.881
+TNS   : 0.000
+
+------------------------------------------------------------
