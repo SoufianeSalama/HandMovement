@@ -90,9 +90,12 @@ architecture my_structural of digital_cam_impl4 is
 			HEX2: OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
 			HEX3: OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
 			HEX4: OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
-			HEX5: OUT STD_LOGIC_VECTOR (6 DOWNTO 0)
+			HEX5: OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
 
-			--activeArea: in STD_LOGIC
+			activeArea: in STD_LOGIC;
+			
+			Hcnt: in STD_LOGIC_VECTOR(9 downto 0);
+			Vcnt: in STD_LOGIC_VECTOR(9 downto 0)
 		);
 		end COMPONENT;
   COMPONENT do_edge_detection 
@@ -131,7 +134,10 @@ architecture my_structural of digital_cam_impl4 is
     Nblank : OUT std_logic;      
     clkout : OUT std_logic;
     activeArea : OUT std_logic;
-    Nsync : OUT std_logic
+    Nsync : OUT std_logic;
+	 
+	 Hcnt_out: OUT STD_LOGIC_VECTOR(9 downto 0);
+	 Vcnt_out: OUT STD_LOGIC_VECTOR(9 downto 0)
     );
   END COMPONENT;
 
@@ -282,6 +288,8 @@ architecture my_structural of digital_cam_impl4 is
   signal activeArea : std_logic;
   signal nBlank     : std_logic;
   signal vSync      : std_logic;
+  signal vga_hcnt : STD_LOGIC_VECTOR(9 downto 0);
+  signal vga_vcnt : STD_LOGIC_VECTOR(9 downto 0);
   -- data_to_rgb should the multiplexing of rddata_buf_1 (when displaying
   -- video directly) or rddata_buf_2 (for realtime edge detection video mode);
   signal data_to_rgb : std_logic_vector(11 downto 0);
@@ -582,7 +590,10 @@ begin
     Vsync      => vsync,
     Nblank     => nBlank,
     Nsync      => vga_sync_N,
-    activeArea => activeArea
+    activeArea => activeArea,
+	 
+	 Hcnt_out => vga_hcnt,
+	 Vcnt_out => vga_vcnt
   );  
   Inst_RGB: RGB PORT MAP(
     Din => data_to_rgb, -- comes from either rddata_buf_1 or rddata_buf_2;
@@ -616,7 +627,12 @@ begin
 	 HEX2 => HEX2(6 DOWNTO 0),
 	 HEX3 => HEX3(6 DOWNTO 0),
 	 HEX4 => HEX4(6 DOWNTO 0),
-	 HEX5 => HEX5(6 DOWNTO 0)
+	 HEX5 => HEX5(6 DOWNTO 0),
+	 
+	 ActiveArea => Nblank,
+	 Hcnt => vga_hcnt,
+	 Vcnt => vga_vcnt
+	 
 	 
 	--vga_hs => vga_hsync,
 	--vga_vs => vga_vsync,

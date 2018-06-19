@@ -18,8 +18,8 @@ architecture Behavioral of RGB is
 
 begin
 
-  R <= Din(11 downto 8) & Din(11 downto 8) when Nblank='1' else "00000000";
-  G <= Din(7 downto 4)  & Din(7 downto 4)  when Nblank='1' else "00000000";
-  B <= Din(3 downto 0)  & Din(3 downto 0)  when Nblank='1' else "00000000";
+  R <= Din(11 downto 8) & Din(11 downto 8) when Nblank='1' else "10010010";
+  G <= Din(7 downto 4)  & Din(7 downto 4)  when Nblank='1' else "10001001";
+  B <= Din(3 downto 0)  & Din(3 downto 0)  when Nblank='1' else "00100100";
 
 end Behavioral;

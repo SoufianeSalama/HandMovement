@@ -13,7 +13,10 @@ entity VGA is
     Hsync,Vsync : out  STD_LOGIC;  -- les deux signaux de synchronisation pour l'ecran VGA
     Nblank : out  STD_LOGIC;       -- signal de commande du convertisseur N/A ADV7123
     activeArea : out  STD_LOGIC;
-    Nsync : out  STD_LOGIC         -- signaux de synchronisation et commande de l'ecran TFT
+    Nsync : out  STD_LOGIC;         -- signaux de synchronisation et commande de l'ecran TFT
+	 
+	 Hcnt_out: OUT STD_LOGIC_VECTOR(9 downto 0);
+	 Vcnt_out: OUT STD_LOGIC_VECTOR(9 downto 0)
   );        
 end VGA;
 
@@ -38,29 +41,38 @@ constant VR: integer :=2;    --retrace
 
 begin
 
-
 -- initialisation d'un compteur de 0 a 799 (800 pixel par ligne):
 -- a chaque front d'horloge en incremente le compteur de colonnes
 -- c-a-d du 0 a 799.
   process(CLK25)
   begin
     if (CLK25'event and CLK25='1') then
+	  
+
       if (Hcnt = HM) then -- 799
         Hcnt <= "0000000000";
+		   Hcnt_out <= Hcnt;
         if (Vcnt= VM) then -- 524
           Vcnt <= "0000000000";
+			 
+				Vcnt_out <= Vcnt;
           activeArea <= '1';
         else
           if vCnt < 240-1 then
             activeArea <= '1';
           end if;
           Vcnt <= Vcnt+1;
+			
+				Vcnt_out <= Vcnt;
         end if;
       else      
         if hcnt = 320-1 then
           activeArea <= '0';
         end if;
         Hcnt <= Hcnt + 1;
+		  
+		  Hcnt_out <= Hcnt;
+
       end if;
     end if;
   end process;

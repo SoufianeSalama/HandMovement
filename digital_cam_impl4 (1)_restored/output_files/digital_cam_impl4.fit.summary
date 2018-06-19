@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Jun 18 15:42:34 2018
+Fitter Status : Successful - Tue Jun 19 16:45:51 2018
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : digital_cam_impl4
 Top-level Entity Name : digital_cam_impl4
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 560 / 32,070 ( 2 % )
-Total registers : 547
+Logic utilization (in ALMs) : 3,694 / 32,070 ( 12 % )
+Total registers : 981
 Total pins : 98 / 457 ( 21 % )
 Total virtual pins : 0
 Total block memory bits : 2,628,096 / 4,065,280 ( 65 % )
