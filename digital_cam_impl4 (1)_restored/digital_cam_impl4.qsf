@@ -74,6 +74,9 @@ set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
 set_location_assignment PIN_AF14 -to clk_50
 set_location_assignment PIN_AA14 -to btn_RESET
+set_location_assignment PIN_AE12 -to SW_GAME_MODUS
+set_location_assignment PIN_Y16 -to BTN_GAME_MODUS
+
 set_location_assignment PIN_V16 -to LED_config_finished
 set_location_assignment PIN_W16 -to LED_dll_locked
 set_location_assignment PIN_V17 -to LED_done

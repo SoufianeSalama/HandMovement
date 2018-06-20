@@ -33,6 +33,8 @@ entity digital_cam_impl4 is
   Port ( 
     clk_50 : in STD_LOGIC;
     btn_RESET: in STD_LOGIC; -- KEY0; manual reset;
+	 SW_GAME_MODUS: in STD_LOGIC; -- SW9 
+	 BTN_GAME_MODUS: in STD_LOGIC; -- KEY9
     slide_sw_resend_reg_values : in STD_LOGIC; -- rewrite all OV7670's registers;
     slide_sw_NORMAL_OR_EDGEDETECT : in STD_LOGIC; -- 0 normal, 1 edge detection; 
     
@@ -95,7 +97,9 @@ architecture my_structural of digital_cam_impl4 is
 			activeArea: in STD_LOGIC;
 			
 			Hcnt: in STD_LOGIC_VECTOR(9 downto 0);
-			Vcnt: in STD_LOGIC_VECTOR(9 downto 0)
+			Vcnt: in STD_LOGIC_VECTOR(9 downto 0);
+			
+			game_modus: in STD_LOGIC
 		);
 		end COMPONENT;
   COMPONENT do_edge_detection 
@@ -284,6 +288,9 @@ architecture my_structural of digital_cam_impl4 is
   -- RGB related;
   signal red,green,blue : std_logic_vector(7 downto 0);
   signal ycomp,ucomp,vcomp : std_logic_vector(7 downto 0);
+  
+  signal switch_game_modus: std_logic;
+  signal button_game_modus: std_logic;
  
   signal activeArea : std_logic;
   signal nBlank     : std_logic;
@@ -516,6 +523,8 @@ begin
   );
   -- take the inverted push button because KEY0 on DE2-115 board generates
   -- a signal 111000111; with 1 with not pressed and 0 when pressed/pushed;
+  switch_game_modus <= SW_GAME_MODUS; --SW9
+  button_game_modus <= not BTN_GAME_MODUS; --KEY3
   reset_manual <= not btn_RESET; -- KEY0
   sw_resend_reg_values <= not slide_sw_resend_reg_values;
   -- first thing when the system is powered on, I should automatically
@@ -611,6 +620,7 @@ begin
  vga_r <= ycomp(7 downto 0);
  vga_g <= ucomp(7 downto 0);
  vga_b <= vcomp(7 downto 0);
+ 
   
   --vga_r <= "11111111";
   --vga_g <= "11111111";
@@ -621,7 +631,7 @@ begin
   
   Inst_RGBtoYUV: RGBtoYUV PORT MAP(
 	 clock => clk_25_vga,
-	 --KEY => key,
+	 game_modus => button_game_modus,
 	 
     R => red,
 	 G	=> green,

@@ -220,11 +220,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "slide_sw_NORMAL_OR_EDGEDETECT",
+					"name" : "slide_sw_resend_reg_values",
 					"strict" : false
 				},
 				{
-					"name" : "slide_sw_resend_reg_values",
+					"name" : "slide_sw_NORMAL_OR_EDGEDETECT",
 					"strict" : false
 				},
 				{
@@ -248,11 +248,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "ov7670_data[1]",
+					"name" : "ov7670_data[6]",
 					"strict" : false
 				},
 				{
-					"name" : "ov7670_data[6]",
+					"name" : "ov7670_data[1]",
 					"strict" : false
 				},
 				{
