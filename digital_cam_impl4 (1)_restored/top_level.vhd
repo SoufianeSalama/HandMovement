@@ -607,6 +607,15 @@ begin
   --vga_r <= red(7 downto 0);
   --vga_g <= green(7 downto 0);
   --vga_b <= blue(7 downto 0);
+   --YUV
+ vga_r <= ycomp(7 downto 0);
+ vga_g <= ucomp(7 downto 0);
+ vga_b <= vcomp(7 downto 0);
+  
+  --vga_r <= "11111111";
+  --vga_g <= "11111111";
+  --vga_b <= "11111111";
+  
   vga_vsync <= vsync;
   vga_blank_N <= nBlank;
   
@@ -639,16 +648,7 @@ begin
 	--vga_hb => vga_blank_N
   );
   
-  --YUV
- vga_r <= ycomp(7 downto 0);
- vga_g <= ucomp(7 downto 0);
- vga_b <= vcomp(7 downto 0);
-  
-  --vga_r <= "11111111";
-  --vga_g <= "11111111";
-  --vga_b <= "11111111";
-  
-  
+   
   -- "general purpose" address generator;
   Inst_Address_Generator: Address_Generator PORT MAP(
     rst_i => '0',

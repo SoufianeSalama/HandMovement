@@ -5,8 +5,12 @@ module RGBtoYUV(R, G, B, Y, U, V, clock, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, Act
 	input [7:0] R, G, B;
 	
 	input wire ActiveArea; 
-	input wire Hcnt, Vcnt;
-
+	input wire [9:0] Hcnt, Vcnt;
+	
+	wire [9:0] dispCol;
+	wire [9:0] dispRow;
+	assign dispCol = Hcnt;
+	assign dispRow = Vcnt;
 	
 	output reg [7:0] Y,U,V;
 	reg [7:0] newY,newU,newV;
@@ -15,51 +19,75 @@ module RGBtoYUV(R, G, B, Y, U, V, clock, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, Act
 	//wire reset;
 	//assign reset = !KEY;
 	
-	parameter HOR_TOTAL = 640; //640
-	parameter VER_TOTAL = 480; //480
+	parameter HOR_TOTAL = 320; //640
+	parameter VER_TOTAL = 240; //480
 
-	reg [11:0] dispCol;
-	reg [10:0] dispRow;
-	reg [15:0] xpositie,xpos;
+	
+	reg [9:0] xpositie,xpos, ypos;
 	reg [31:0] cnt;
-	reg [1:0] testbool;
+	reg [1:0] resetbool;
 	
 	reg [63:0] integraaly_teller, integraaly_noemer, integraalx_teller,integraalx_noemer ;
 	
-	 /*binToHex bth(.in(xpos%10), .out(HEX0));
+	 binToHex bth(.in(xpos%10), .out(HEX0));
 	 binToHex bth1(.in((xpos/10)%10), .out(HEX1));
     binToHex bth2(.in((xpos/100)%10), .out(HEX2));	 
 	 
 	 binToHex bth3(.in(ypos%10), .out(HEX3));
 	 binToHex bth4(.in((ypos/10)%10), .out(HEX4));
-    binToHex bth5(.in((ypos/100)%10), .out(HEX5));*/
+    binToHex bth5(.in((ypos/100)%10), .out(HEX5));
 	
 	 
-	 binToHex bth(.in(xpos%10), .out(HEX0));
+	 /*binToHex bth(.in(xpos%10), .out(HEX0));
 	 binToHex bth1(.in((xpos/10)%10), .out(HEX1));
     binToHex bth2(.in((xpos/100)%10), .out(HEX2));	 
 	 
-	 binToHex bth3(.in((xpos/1000)%10), .out(HEX3));
-	 binToHex bth4(.in((xpos/10000)%10), .out(HEX4));
-    binToHex bth5(.in((xpos/100000)%10), .out(HEX5));
+	 binToHex bth3(.in((ypos/1000)%10), .out(HEX3));
+	 binToHex bth4(.in((ypos/10000)%10), .out(HEX4));
+    binToHex bth5(.in((ypos/100000)%10), .out(HEX5));*/
 	 
-	 //calculate_x_positie cxp(.somteller(integraaly_teller), .somnoemer(integraaly_noemer), .uitkomst(xpositie), .flag(flag2)); // only calculate when flag is up
-	
+	 //Game game(.clk(clock), .barx(xpos), .red(R), .green(G), .blue(B), .visile(ActiveArea), .col(dispCol), .row(dispRow));
+	 
+
 	always @(posedge clock)
 			begin
+						
+			/*if (cnt < 5000000)
+					begin
+						cnt = cnt + 1;
+						end
+				else
+					begin
+						cnt = 0;
+						
+						if (dispCol>xpos)
+						begin
+							xpos = dispCol;
+							
+						end
+						
+						if (dispRow>ypos)
+						begin
+							ypos = dispRow;
+						end
+
+					end*/
+						 
+			
+			
 			//testbool = 0;
 			
 			if (resetbool)
 				begin
 				resetbool = 0;
-				dispCol =11'b0;
-				dispRow = 10'b0;
+				//dispCol =11'b0;
+				//dispRow = 10'b0;
 				
 				integraaly_teller =63'b0;
 				integraaly_noemer =63'b0;
 				
-				integraalx_teller =63'b0
-				integraalx_noemer =63'b0
+				integraalx_teller =63'b0;
+				integraalx_noemer =63'b0;
 				end
 				
 						
@@ -78,10 +106,10 @@ module RGBtoYUV(R, G, B, Y, U, V, clock, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, Act
 						 
 			if (dispCol == HOR_TOTAL)
 				begin
-				dispCol =11'b0;
+				//dispCol =11'b0;
 				if (dispRow == VER_TOTAL)
 					begin
-					dispRow = 10'b0;
+					//dispRow = 10'b0;
 					//Xpos berekenen
 				
 					xpositie = integraaly_teller/integraaly_noemer;
@@ -94,7 +122,7 @@ module RGBtoYUV(R, G, B, Y, U, V, clock, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, Act
 					integraaly_teller = integraaly_teller + integraalx_teller;
 					integraaly_noemer = integraaly_noemer + integraalx_noemer;
 					
-					dispRow = dispRow + 1;
+					//dispRow = dispRow + 1;
 					
 					integraalx_teller = 63'b0;
 					integraalx_noemer = 63'b0;
@@ -102,7 +130,7 @@ module RGBtoYUV(R, G, B, Y, U, V, clock, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, Act
 				end
 		else
 			begin
-			dispCol = dispCol +1;
+			//dispCol = dispCol +1;
 			
 			newU = (R - G);
 			
@@ -160,4 +188,3 @@ module binToHex(in, out);
 	endcase
 	end
 endmodule
-

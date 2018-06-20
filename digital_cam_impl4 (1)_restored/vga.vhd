@@ -47,11 +47,11 @@ begin
   process(CLK25)
   begin
     if (CLK25'event and CLK25='1') then
-	  
-
+		Vcnt_out <= Vcnt;
+		Hcnt_out <= Hcnt;
       if (Hcnt = HM) then -- 799
         Hcnt <= "0000000000";
-		   Hcnt_out <= Hcnt;
+		  Hcnt_out <= Hcnt;
         if (Vcnt= VM) then -- 524
           Vcnt <= "0000000000";
 			 
